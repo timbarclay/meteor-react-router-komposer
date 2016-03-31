@@ -7,10 +7,10 @@ import { ListItems } from '../../collections/list-items.js';
 import { ListItem } from '../components/listItem.jsx';
 
 const composer = (props, onData) => {
-  const subscription = Meteor.subscribe('list-items');
+  const subscription = Meteor.subscribe('single-item', props.params.id);
 
   if (subscription.ready()) {
-    const listItem = ListItems.findOne({_id: props.params.id});
+    const listItem = ListItems.findOne(props.params.id);
     onData(null, { listItem });
   }
 };
