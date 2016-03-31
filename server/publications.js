@@ -1,9 +1,20 @@
+import { Meteor } from 'meteor/meteor';
 import { ListItems } from '../collections/list-items.js';
 
-Meteor.publish('list-items', function() {
-  return ListItems.find({}, {fields: {_id: 1, title: 1}});
-});
+const listFields = {_id: 1, title: 1};
+const limit = 5;
 
-Meteor.publish('single-item', function(id) {
-  return ListItems.find(id);
-})
+const getListItemsPub = (filterDone, pageSkip = 0) => {
+  let query = {};
+  
+  if(filterDone){
+    query.done = filterDone;
+  }
+  
+  return ListItems.find(query, {fields: listFields, skip: pageSkip});
+}
+
+Meteor.publish('list-items', getListItemsPub);
+
+Meteor.publish('single-item', id => 
+  ListItems.find(id));

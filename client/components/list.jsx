@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const renderIfData = (listItems) => {
-  if ( listItems && listItems.length > 0 ) {
+  if (listItems && listItems.length > 0) {
     return listItems.map(item => {
       return <li key={ item._id }>
         <Link to={`/list/${ item._id }`}>{ item.title }</Link>

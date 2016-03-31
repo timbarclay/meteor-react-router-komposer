@@ -7,7 +7,7 @@ import { ListItems } from '../../collections/list-items.js';
 import { List } from '../components/list.jsx';
 
 const composer = (props, onData) => {
-  const subscription = Meteor.subscribe( 'list-items' );
+  const subscription = Meteor.subscribe('list-items', null);
 
   if (subscription.ready()) {
     const listItems = ListItems.find().fetch();
