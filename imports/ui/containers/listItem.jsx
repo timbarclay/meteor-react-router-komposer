@@ -3,8 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
 
 import { composeWithTracker } from 'react-komposer';
-import { ListItems } from '../../collections/list-items.js';
-import { ListItem } from '../components/listItem.jsx';
+import { ListItems } from '../../api/list-items/list-items.js';
+import ListItem from '../components/listItem.jsx';
 
 const composer = (props, onData) => {
   const subscription = Meteor.subscribe('single-item', props.params.id);

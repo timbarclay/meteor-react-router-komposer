@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { ListItems } from '../collections/list-items.js';
+import { ListItems } from '../list-items.js';
 
 const listFields = {_id: 1, title: 1};
 const limit = 5;

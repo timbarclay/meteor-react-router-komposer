@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ListItem = ({ onClick, listItem }) => {
+export default ({ onClick, listItem }) => {
   return (
     <div onClick={onClick}>
       <h2 style={{textDecoration: listItem.done ? 'line-through' : 'none'}}>

@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { ListItems } from '../collections/list-items.js';
+import { ListItems } from './list-items.js';
 
 Meteor.methods({
   addPost(title, body){

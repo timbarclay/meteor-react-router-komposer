@@ -1,7 +1,6 @@
 import React from 'react';
 import { IndexLink } from 'react-router';
 import { Link } from 'react-router';
-import AddPost from './addPost.jsx';
 
 export default React.createClass({
   render() {
@@ -11,8 +10,6 @@ export default React.createClass({
         <Link to="/list">Items</Link>
         
         {this.props.children}
-        
-        <AddPost />
       </div>
     )
   }

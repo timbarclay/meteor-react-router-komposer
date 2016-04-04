@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import AddPost from './addPost.jsx';
+
 const renderIfData = (listItems) => {
   if (listItems && listItems.length > 0) {
     return listItems.map(item => {
@@ -13,8 +15,9 @@ const renderIfData = (listItems) => {
   }
 };
 
-export const List = ({listItems, children}) => (
+export default ({listItems, children}) => (
   <div>
+    <AddPost />
     <ol>{ renderIfData(listItems) }</ol>
     { children }
   </div>
