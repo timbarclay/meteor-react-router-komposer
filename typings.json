@@ -1,0 +1,8 @@
+{
+  "ambientDependencies": {
+    "meteor": "registry:dt/meteor#1.3.0+20160330185132",
+    "mongodb": "registry:dt/mongodb#2.1.0+20160328151449",
+    "react": "registry:dt/react#0.14.0+20160319053454",
+    "react-router": "registry:dt/react-router#2.0.0+20160330124659"
+  }
+}
