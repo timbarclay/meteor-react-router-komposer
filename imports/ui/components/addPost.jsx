@@ -1,12 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { addPost } from '../actions/post-actions.js';
 
-const addNewPost = (title, body) => {
-  addPost(title, body);
-}; 
-
-const AddPostComponent = ({dispatch}) => {
+export default () => {
   let title;
   let body;
   
@@ -15,7 +10,7 @@ const AddPostComponent = ({dispatch}) => {
       <input ref={node => title = node}/>
       <input ref={node => body = node}/>
       <button onClick={() => {
-        dispatch(addNewPost(title.value, body.value));
+        addPost(title.value, body.value);
         title.value = body.value = "";
       }}>
       Add Post
@@ -23,5 +18,3 @@ const AddPostComponent = ({dispatch}) => {
     </div>
   );
 };
-
-export default connect()(AddPostComponent);
