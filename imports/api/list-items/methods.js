@@ -3,6 +3,7 @@ import { ListItems } from './list-items.js';
 
 Meteor.methods({
   addPost(title, body){
+    debugger;
     const post = ListItems.insert({
       title: title,
       body: body,
