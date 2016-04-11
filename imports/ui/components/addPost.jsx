@@ -1,5 +1,5 @@
 import React from 'react';
-import { addPost } from '../actions/post-actions.js';
+import { addPost } from '../../api/list-items/methods.js';
 
 export default () => {
   let title;

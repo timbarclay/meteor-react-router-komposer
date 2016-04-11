@@ -3,6 +3,7 @@ import { ListItems } from './list-items.js';
 
 Meteor.methods({
   addPost(title, body){
+    debugger;
     const post = ListItems.insert({
       title: title,
       body: body,
@@ -16,3 +17,7 @@ Meteor.methods({
     return ListItems.update({_id: id}, {$set: {done: !item.done}})
   }
 });
+
+export const addPost = (title, body) => Meteor.call('addPost', title, body);
+
+export const toggleDone = (id) => Meteor.call('toggleDone', id);
